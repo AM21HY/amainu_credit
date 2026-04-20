@@ -24,7 +24,7 @@
       box-shadow: 0 4px 16px rgba(0, 0, 0, 0.06);
     }
 
-    /* ナビ（HOMEと統一） */
+    /* ナビ */
     nav {
       margin-bottom: 16px;
       opacity: 0;
@@ -48,9 +48,9 @@
       font-weight: bold;
     }
 
+    /* 今いるページ */
     .current {
       opacity: 0.5;
-      pointer-events: none;
     }
 
     hr {
@@ -59,7 +59,7 @@
       border-top: 1px solid #ddd;
     }
 
-    /* タイトル（小さめ＋アニメ） */
+    /* タイトル */
     .hero {
       height: 100px;
       display: flex;
@@ -123,7 +123,7 @@
 
 <div class="page">
 
-  <!-- ナビ（全ページ共通） -->
+  <!-- ナビ（全部クリック可能） -->
   <nav>
     <a href="index.html">
       <img src="images/HOMEcredit.png" class="nav-btn">
@@ -137,13 +137,14 @@
 
     <span class="divider">｜</span>
 
-    <!-- 今いるページ -->
-    <img src="images/TRACKScredit.png" class="nav-btn current">
+    <a href="music.html">
+      <img src="images/TRACKScredit.png" class="nav-btn current">
+    </a>
   </nav>
 
   <hr>
 
-  <!-- タイトル（小さめアニメ） -->
+  <!-- タイトル -->
   <div class="hero">
     <img src="images/TRACKScredit.png" class="title-img">
   </div>
