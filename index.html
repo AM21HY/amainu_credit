@@ -24,22 +24,35 @@
       box-shadow: 0 4px 16px rgba(0, 0, 0, 0.06);
     }
 
+    /* ナビ */
     nav {
       margin-bottom: 16px;
       font-size: 14px;
     }
 
+    .nav-btn {
+      height: 48px;              /* ←ここでサイズ調整 */
+      vertical-align: middle;
+    }
+
+    .divider {
+      display: inline-block;
+      vertical-align: middle;
+      margin: 0 6px;
+      color: #222;
+      font-weight: bold;
+    }
+
     nav a {
-      color: #145bb5;
       text-decoration: none;
     }
 
-    nav a:hover {
-      text-decoration: underline;
-    }
-
-    h1 {
-      margin-top: 0;
+    /* メイン見出し */
+    .h1-img {
+      width: 100%;
+      max-width: 500px;          /* ←デカさ調整 */
+      display: block;
+      margin: 40px auto;
     }
 
     .note {
@@ -55,44 +68,27 @@
 <div class="page">
 
   <!-- ナビ -->
-<nav>
-  <img src="images/HOMEcredit.png" alt="HOME" class="nav-btn">
-  <span class="divider">｜</span>
-  <a href="creators.html">
-    <img src="images/CREDITScredit.png" alt="CREDITS" class="nav-btn">
-  </a>
-  <span class="divider">｜</span>
-  <a href="music.html">
-    <img src="images/TRACKScredit.png" alt="TRACKS" class="nav-btn">
-  </a>
-</nav>
-<hr>
+  <nav>
+    <img src="images/HOMEcredit.png" alt="HOME" class="nav-btn">
+    <span class="divider">｜</span>
 
-<h1>
-  <img src="images/HOMEcredit.png" alt="HOME" class="h1-img">
-</h1>
+    <a href="creators.html">
+      <img src="images/CREDITScredit.png" alt="CREDITS" class="nav-btn">
+    </a>
 
-<style>
-nav img {
-  height: 40px;           
-  vertical-align: middle; 
-  display: inline-block;  
-}
+    <span class="divider">｜</span>
 
-nav .divider {
-  display: inline-block;
-  vertical-align: middle;
-  margin: 0 6px;          
-  color: #222;            
-  font-weight: bold;
-}
-</style>
-  
-  <h1>  <img src="images/HOMEcredit.png" alt="HOME"></h1>
+    <a href="music.html">
+      <img src="images/TRACKScredit.png" alt="TRACKS" class="nav-btn">
+    </a>
+  </nav>
 
+  <hr>
 
-}
-</style>
+  <!-- デカい見出し（HOMEは1個だけ） -->
+  <h1>
+    <img src="images/HOMEcredit.png" alt="HOME" class="h1-img">
+  </h1>
 
   <p>
     本一覧は、本アカウントの投稿動画や配信演出等において利用している<br>
