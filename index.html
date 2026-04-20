@@ -28,8 +28,6 @@
     nav {
       margin-bottom: 16px;
       font-size: 14px;
-
-      /* ふわっと表示 */
       opacity: 0;
       animation: fadeUp 0.8s ease forwards;
     }
@@ -56,26 +54,23 @@
       text-decoration: none;
     }
 
-    /* 赤枠ポジション用エリア */
+    /* HERO */
     .hero {
-      height: 160px;               /* ←ここで位置調整 */
+      height: 160px;
       display: flex;
       align-items: center;
       justify-content: center;
     }
 
-    /* HOME */
     .h1-img {
       max-width: 250px;
-
-      /* ふわっと表示 */
       opacity: 0;
       transform: translateY(30px);
       animation: fadeUp 1s ease forwards;
       animation-delay: 0.3s;
     }
 
-    /* アニメーション */
+    /* アニメ */
     @keyframes fadeUp {
       to {
         opacity: 1;
@@ -83,10 +78,28 @@
       }
     }
 
+    /* 共通テキスト */
+    p {
+      margin: 0 0 16px;
+      font-size: 16px;
+    }
+
+    /* 注意書き */
     .note {
-      margin: 4px 0 16px;
-      font-size: 14px;
-      color: #555;
+      margin-top: 8px;
+      color: #666;
+      border-left: 3px solid #ddd;
+      padding-left: 10px;
+    }
+
+    /* リンク少しだけ整える */
+    a {
+      color: #145bb5;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
     }
   </style>
 </head>
@@ -113,31 +126,30 @@
 
   <hr>
 
-  <!-- HOME（赤枠位置） -->
+  <!-- HOME -->
   <div class="hero">
     <img src="images/HOMEcredit.png" alt="HOME" class="h1-img">
   </div>
 
-<p>
-  本サイトでは、配信や動画制作で使用している素材のクレジット情報や、活動における案件実績をまとめています。
-</p>
+  <p>
+    本サイトでは、配信や動画制作で使用している素材のクレジット情報や、活動における案件実績をまとめています。
+  </p>
 
-<p>
-  各素材の詳細や実績については、それぞれのページよりご確認ください。<br>
-  初めての方は、上部メニューから目的のページをご覧ください。
-</p>
+  <p>
+    各素材の詳細や実績については、それぞれのページよりご確認ください。<br>
+    初めての方は、上部メニューから目的のページをご覧ください。
+  </p>
 
-<p>
-  公式サイトはこちらから▽<br>
-  <a href="https://amainumoka-vt.amebaownd.com/" target="_blank">
-    https://amainumoka-vt.amebaownd.com/
-  </a>
-</p>
+  <p>
+    公式サイトはこちらから▽<br>
+    <a href="https://amainumoka-vt.amebaownd.com/" target="_blank">
+      ▶ 公式HPを見る
+    </a>
+  </p>
 
-<p class="note">
-  ※ 本サイトは素材の配布を目的としたものではなく、利用素材のクレジット管理を目的としています。<br>
-  ※ 掲載内容には、現在使用中のものに加え、今後使用を検討している素材も含まれます。
-
+  <p class="note">
+    ※ 本サイトは素材の配布を目的としたものではなく、利用素材のクレジット管理を目的としています。<br>
+    ※ 掲載内容には、現在使用中のものに加え、今後使用を検討している素材も含まれます。
   </p>
 
 </div>
