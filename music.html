@@ -24,38 +24,64 @@
       box-shadow: 0 4px 16px rgba(0, 0, 0, 0.06);
     }
 
-    .header {
-      display: flex;
-      align-items: center;
-      gap: 16px;
-      margin-bottom: 12px;
-      flex-wrap: wrap;
-    }
-
-    .header-title {
-      font-size: 22px;
-      font-weight: 700;
-    }
-
+    /* ナビ */
     nav {
-      width: 100%;
-      margin-top: 8px;
-      font-size: 14px;
+      margin-bottom: 16px;
+      opacity: 0;
+      animation: fadeUp 0.8s ease forwards;
     }
 
     nav a {
-      color: #145bb5;
-      text-decoration: none;
+      display: inline-block;
     }
 
-    nav a:hover {
-      text-decoration: underline;
+    .nav-btn {
+      height: 60px;
+      display: block; /* ←隙間対策 */
+      transition: 0.2s;
+    }
+
+    .nav-btn:hover {
+      transform: scale(1.05);
+    }
+
+    .divider {
+      margin: 0 6px;
+      font-weight: bold;
+    }
+
+    .current {
+      opacity: 0.5;
     }
 
     hr {
       margin: 16px 0;
       border: none;
       border-top: 1px solid #ddd;
+    }
+
+    /* タイトル */
+    .hero {
+      height: 100px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .title-img {
+      max-width: 180px;
+      opacity: 0;
+      transform: translateY(20px);
+      animation: fadeUp 0.8s ease forwards;
+      animation-delay: 0.2s;
+    }
+
+    /* アニメ */
+    @keyframes fadeUp {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
     }
 
     h2 {
@@ -98,19 +124,31 @@
 
 <div class="page">
 
-  <!-- ヘッダー -->
-  <div class="header">
-    <img src="./logo%20image/ｍ_rogo.png" width="55">
-    <div class="header-title">使用楽曲</div>
+  <!-- ナビ -->
+  <nav>
+    <a href="index.html">
+      <img src="images/HOMEcredit.png" class="nav-btn">
+    </a>
 
-    <nav>
-      <a href="index.html">TOP</a> ｜ 
-      <a href="creators.html">使用サイト・クリエイター様</a> ｜ 
-      <a href="music.html">使用楽曲</a>
-    </nav>
-  </div>
+    <span class="divider">｜</span>
+
+    <a href="creators.html">
+      <img src="images/CREDITScredit.png" class="nav-btn">
+    </a>
+
+    <span class="divider">｜</span>
+
+    <a href="music.html">
+      <img src="images/TRACKScredit.png" class="nav-btn current">
+    </a>
+  </nav>
 
   <hr>
+
+  <!-- タイトル -->
+  <div class="hero">
+    <img src="images/TRACKScredit.png" class="title-img">
+  </div>
 
   <div class="credit-list">
 
