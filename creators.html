@@ -2,7 +2,7 @@
 <html lang="ja">
 <head>
   <meta charset="UTF-8">
-  <title>使用楽曲</title>
+  <title>クレジット</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <style>
@@ -26,14 +26,21 @@
 
     /* ナビ */
     nav {
+      display: flex;
+      align-items: center;
+      gap: 8px;
       margin-bottom: 16px;
       opacity: 0;
       animation: fadeUp 0.8s ease forwards;
     }
 
+    nav a {
+      display: inline-flex;
+    }
+
     .nav-btn {
       height: 60px;
-      vertical-align: middle;
+      display: block;
       transition: 0.2s;
     }
 
@@ -42,13 +49,10 @@
     }
 
     .divider {
-      display: inline-block;
-      vertical-align: middle;
-      margin: 0 6px;
-      font-weight: bold;/
+      font-weight: bold;
     }
 
-    /* 今いるページ */
+    /* 今いるページ（見た目だけ） */
     .current {
       opacity: 0.5;
     }
@@ -61,7 +65,7 @@
 
     /* タイトル */
     .hero {
-      height: 100px;
+      height: 90px;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -132,78 +136,48 @@
     <span class="divider">｜</span>
 
     <a href="creators.html">
-      <img src="images/CREDITScredit.png" class="nav-btn">
+      <img src="images/CREDITScredit.png" class="nav-btn current">
     </a>
 
     <span class="divider">｜</span>
 
     <a href="music.html">
-      <img src="images/TRACKScredit.png" class="nav-btn current">
+      <img src="images/TRACKScredit.png" class="nav-btn">
     </a>
   </nav>
 
   <hr>
 
-  <!-- タイトル -->
+  <!-- 中央タイトル（ここが重要） -->
   <div class="hero">
-    <img src="images/TRACKScredit.png" class="title-img">
+    <img src="images/CREDITScredit.png" class="title-img">
   </div>
 
   <div class="credit-list">
 
-    <h2>使用楽曲（NoCopyrightSounds）</h2>
+    <h2>使用サイト・クリエイター様</h2>
 
     <p class="credit-item">
-      ⋄ Different Heaven & EH!DE<br>
-      <a href="https://youtu.be/jK2aIUmmdP4" target="_blank">https://youtu.be/jK2aIUmmdP4</a>
+      ⋄ NoCopyrightSounds (NCS)<br>
+      <a href="https://ncs.io/" target="_blank">https://ncs.io/</a>
     </p>
     <p class="credit-divider">-------------------------</p>
 
     <p class="credit-item">
-      ⋄ JJD - Adventure | Glitch Hop<br>
-      <a href="https://youtu.be/f2xGxd9xPYA" target="_blank">https://youtu.be/f2xGxd9xPYA</a>
+      ⋄ DOVA-SYNDROME<br>
+      <a href="https://dova-s.jp/" target="_blank">https://dova-s.jp/</a>
     </p>
     <p class="credit-divider">-------------------------</p>
 
     <p class="credit-item">
-      ⋄ Dirty Palm - Freakshow<br>
-      <a href="https://youtu.be/2jwj9wVx3mg" target="_blank">https://youtu.be/2jwj9wVx3mg</a>
+      ⋄ 効果音ラボ<br>
+      <a href="https://soundeffect-lab.info/" target="_blank">https://soundeffect-lab.info/</a>
     </p>
     <p class="credit-divider">-------------------------</p>
 
     <p class="credit-item">
-      ⋄ ANGELPLAYA - PULL UP<br>
-      <a href="https://youtu.be/aQmeIePES6g" target="_blank">https://youtu.be/aQmeIePES6g</a>
-    </p>
-    <p class="credit-divider">-------------------------</p>
-
-    <p class="credit-item">
-      ⋄ Rudeejay & NOYSE - Party Pioneers<br>
-      <a href="https://youtu.be/LRs8Qu_X3EY" target="_blank">https://youtu.be/LRs8Qu_X3EY</a>
-    </p>
-    <p class="credit-divider">-------------------------</p>
-
-    <p class="credit-item">
-      ⋄ MVSTAFA x ANIZYZ - Different Eyes<br>
-      <a href="https://youtu.be/oHJxWgpMmSY" target="_blank">https://youtu.be/oHJxWgpMmSY</a>
-    </p>
-    <p class="credit-divider">-------------------------</p>
-
-    <p class="credit-item">
-      ⋄ Ahrix - Nova<br>
-      <a href="https://youtu.be/WfvzuniZTRA" target="_blank">https://youtu.be/WfvzuniZTRA</a>
-    </p>
-    <p class="credit-divider">-------------------------</p>
-
-    <p class="credit-item">
-      ⋄ Robin Hustin - Burn it Down<br>
-      <a href="https://youtu.be/xMCXZj5zwBE" target="_blank">https://youtu.be/xMCXZj5zwBE</a>
-    </p>
-    <p class="credit-divider">-------------------------</p>
-
-    <p class="credit-item">
-      ⋄ Dirty Palm - No Stopping Love<br>
-      <a href="https://youtu.be/xFoGtSiqins" target="_blank">https://youtu.be/xFoGtSiqins</a>
+      ⋄ Pixabay<br>
+      <a href="https://pixabay.com/ja/" target="_blank">https://pixabay.com/ja/</a>
     </p>
 
   </div>
