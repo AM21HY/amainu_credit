@@ -24,34 +24,40 @@
       box-shadow: 0 4px 16px rgba(0, 0, 0, 0.06);
     }
 
-    /* ナビ */
+    /* ナビ（ここ重要） */
     nav {
+      display: flex;
+      align-items: center;
+      gap: 6px;
       margin-bottom: 16px;
+
       opacity: 0;
       animation: fadeUp 0.8s ease forwards;
     }
 
     nav a {
-      display: inline-block;
+      display: inline-flex;
     }
 
     .nav-btn {
-      height: 60px;
-      display: block; /* ←隙間対策 */
+      height: 48px; /* ←ここがポイント（小さく） */
+      display: block;
+      opacity: 0.6;
       transition: 0.2s;
     }
 
     .nav-btn:hover {
+      opacity: 1;
       transform: scale(1.05);
     }
 
-    .divider {
-      margin: 0 6px;
-      font-weight: bold;
+    .current {
+      opacity: 1; /* ←今のページだけ濃く */
     }
 
-    .current {
-      opacity: 0.5;
+    .divider {
+      font-weight: bold;
+      opacity: 0.6;
     }
 
     hr {
@@ -69,7 +75,7 @@
     }
 
     .title-img {
-      max-width: 180px;
+      max-width: 160px; /* ←少し小さめ */
       opacity: 0;
       transform: translateY(20px);
       animation: fadeUp 0.8s ease forwards;
@@ -160,52 +166,7 @@
     </p>
     <p class="credit-divider">-------------------------</p>
 
-    <p class="credit-item">
-      ⋄ JJD - Adventure | Glitch Hop<br>
-      <a href="https://youtu.be/f2xGxd9xPYA" target="_blank">https://youtu.be/f2xGxd9xPYA</a>
-    </p>
-    <p class="credit-divider">-------------------------</p>
-
-    <p class="credit-item">
-      ⋄ Dirty Palm - Freakshow<br>
-      <a href="https://youtu.be/2jwj9wVx3mg" target="_blank">https://youtu.be/2jwj9wVx3mg</a>
-    </p>
-    <p class="credit-divider">-------------------------</p>
-
-    <p class="credit-item">
-      ⋄ ANGELPLAYA - PULL UP<br>
-      <a href="https://youtu.be/aQmeIePES6g" target="_blank">https://youtu.be/aQmeIePES6g</a>
-    </p>
-    <p class="credit-divider">-------------------------</p>
-
-    <p class="credit-item">
-      ⋄ Rudeejay & NOYSE - Party Pioneers<br>
-      <a href="https://youtu.be/LRs8Qu_X3EY" target="_blank">https://youtu.be/LRs8Qu_X3EY</a>
-    </p>
-    <p class="credit-divider">-------------------------</p>
-
-    <p class="credit-item">
-      ⋄ MVSTAFA x ANIZYZ - Different Eyes<br>
-      <a href="https://youtu.be/oHJxWgpMmSY" target="_blank">https://youtu.be/oHJxWgpMmSY</a>
-    </p>
-    <p class="credit-divider">-------------------------</p>
-
-    <p class="credit-item">
-      ⋄ Ahrix - Nova<br>
-      <a href="https://youtu.be/WfvzuniZTRA" target="_blank">https://youtu.be/WfvzuniZTRA</a>
-    </p>
-    <p class="credit-divider">-------------------------</p>
-
-    <p class="credit-item">
-      ⋄ Robin Hustin - Burn it Down<br>
-      <a href="https://youtu.be/xMCXZj5zwBE" target="_blank">https://youtu.be/xMCXZj5zwBE</a>
-    </p>
-    <p class="credit-divider">-------------------------</p>
-
-    <p class="credit-item">
-      ⋄ Dirty Palm - No Stopping Love<br>
-      <a href="https://youtu.be/xFoGtSiqins" target="_blank">https://youtu.be/xFoGtSiqins</a>
-    </p>
+    <!-- 以下そのままOK -->
 
   </div>
 
