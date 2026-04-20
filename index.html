@@ -28,10 +28,14 @@
     nav {
       margin-bottom: 16px;
       font-size: 14px;
+
+      /* ふわっと表示 */
+      opacity: 0;
+      animation: fadeUp 0.8s ease forwards;
     }
 
     .nav-btn {
-      height: 55px;              /* 左上のボタンサイズ */
+      height: 55px;
       vertical-align: middle;
     }
 
@@ -50,9 +54,23 @@
     /* メイン見出し */
     .h1-img {
       width: 100%;
-      max-width: 250px;          /* ページ見出し */
+      max-width: 180px;
       display: block;
-      margin: 120px auto 40px; 
+      margin: 80px auto 40px;
+
+      /* ふわっと表示 */
+      opacity: 0;
+      transform: translateY(30px);
+      animation: fadeUp 1s ease forwards;
+      animation-delay: 0.3s;
+    }
+
+    /* アニメーション */
+    @keyframes fadeUp {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
     }
 
     .note {
@@ -85,7 +103,6 @@
 
   <hr>
 
-  <!-- デカい見出し（HOMEは1個だけ） -->
   <h1>
     <img src="images/HOMEcredit.png" alt="HOME" class="h1-img">
   </h1>
