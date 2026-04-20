@@ -2,8 +2,8 @@
 <html lang="ja">
 <head>
   <meta charset="UTF-8">
+  <title>使用楽曲</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>使用サイト・クリエイター様</title>
 
   <style>
     body {
@@ -24,31 +24,63 @@
       box-shadow: 0 4px 16px rgba(0, 0, 0, 0.06);
     }
 
-    .header {
-      display: flex;
-      align-items: center;
-      gap: 16px;
-      margin-bottom: 20px;
-      flex-wrap: wrap;
-    }
-
-    .header-title {
-      font-size: 22px;
-      font-weight: 700;
-    }
-
+    /* ナビ（HOMEと統一） */
     nav {
       margin-bottom: 16px;
-      font-size: 14px;
+      opacity: 0;
+      animation: fadeUp 0.8s ease forwards;
     }
 
-    nav a {
-      color: #145bb5;
-      text-decoration: none;
+    .nav-btn {
+      height: 60px;
+      vertical-align: middle;
+      transition: 0.2s;
     }
 
-    nav a:hover {
-      text-decoration: underline;
+    .nav-btn:hover {
+      transform: scale(1.05);
+    }
+
+    .divider {
+      display: inline-block;
+      vertical-align: middle;
+      margin: 0 6px;
+      font-weight: bold;
+    }
+
+    .current {
+      opacity: 0.5;
+      pointer-events: none;
+    }
+
+    hr {
+      margin: 16px 0;
+      border: none;
+      border-top: 1px solid #ddd;
+    }
+
+    /* タイトル（小さめ＋アニメ） */
+    .hero {
+      height: 100px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .title-img {
+      max-width: 180px;
+      opacity: 0;
+      transform: translateY(20px);
+      animation: fadeUp 0.8s ease forwards;
+      animation-delay: 0.2s;
+    }
+
+    /* アニメ */
+    @keyframes fadeUp {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
     }
 
     h2 {
@@ -66,6 +98,10 @@
       color: #145bb5;
       text-decoration: none;
       font-size: 14px;
+    }
+
+    .credit-item a:hover {
+      text-decoration: underline;
     }
 
     .credit-divider {
@@ -87,62 +123,91 @@
 
 <div class="page">
 
-  <!-- ナビ -->
+  <!-- ナビ（全ページ共通） -->
   <nav>
-    <a href="index.html">TOP</a> ｜ 
-    <a href="creators.html">使用サイト・クリエイター様</a> ｜ 
-    <a href="music.html">使用楽曲</a>
+    <a href="index.html">
+      <img src="images/HOMEcredit.png" class="nav-btn">
+    </a>
+
+    <span class="divider">｜</span>
+
+    <a href="creators.html">
+      <img src="images/CREDITScredit.png" class="nav-btn">
+    </a>
+
+    <span class="divider">｜</span>
+
+    <!-- 今いるページ -->
+    <img src="images/TRACKScredit.png" class="nav-btn current">
   </nav>
+
   <hr>
 
-  <!-- ヘッダー -->
-  <div class="header">
-    <img src="./logo%20image/ｍ_rogo.png" width="55">
-    <div class="header-title">使用サイト・クリエイター様</div>
+  <!-- タイトル（小さめアニメ） -->
+  <div class="hero">
+    <img src="images/TRACKScredit.png" class="title-img">
   </div>
 
-  <h2>利用素材サイト様・クリエイター様</h2>
+  <div class="credit-list">
 
-  <p class="credit-divider">-------------------------</p>
+    <h2>使用楽曲（NoCopyrightSounds）</h2>
 
-  <p class="credit-item">⋄ 自遊空間 FanPicks 様</p>
-  <p class="credit-divider">-------------------------</p>
+    <p class="credit-item">
+      ⋄ Different Heaven & EH!DE<br>
+      <a href="https://youtu.be/jK2aIUmmdP4" target="_blank">https://youtu.be/jK2aIUmmdP4</a>
+    </p>
+    <p class="credit-divider">-------------------------</p>
 
-  <p class="credit-item">⋄ pixiv FANBOX（ピクシブ） 様<br>
-  <a href="https://www.fanbox.cc/" target="_blank">https://www.fanbox.cc/</a></p>
-  <p class="credit-divider">-------------------------</p>
+    <p class="credit-item">
+      ⋄ JJD - Adventure | Glitch Hop<br>
+      <a href="https://youtu.be/f2xGxd9xPYA" target="_blank">https://youtu.be/f2xGxd9xPYA</a>
+    </p>
+    <p class="credit-divider">-------------------------</p>
 
-  <p class="credit-item">⋄ ポケットサウンド 様<br>
-  <a href="https://www.youtube.com/@pocketse" target="_blank">https://www.youtube.com/@pocketse</a></p>
-  <p class="credit-divider">-------------------------</p>
+    <p class="credit-item">
+      ⋄ Dirty Palm - Freakshow<br>
+      <a href="https://youtu.be/2jwj9wVx3mg" target="_blank">https://youtu.be/2jwj9wVx3mg</a>
+    </p>
+    <p class="credit-divider">-------------------------</p>
 
-  <p class="credit-item">⋄ オトロジック 様<br>
-  <a href="https://otologic.jp" target="_blank">https://otologic.jp</a></p>
-  <p class="credit-divider">-------------------------</p>
+    <p class="credit-item">
+      ⋄ ANGELPLAYA - PULL UP<br>
+      <a href="https://youtu.be/aQmeIePES6g" target="_blank">https://youtu.be/aQmeIePES6g</a>
+    </p>
+    <p class="credit-divider">-------------------------</p>
 
-  <p class="credit-item">⋄ 効果音ラボ 様<br>
-  <a href="https://soundeffect-lab.info/" target="_blank">https://soundeffect-lab.info/</a></p>
-  <p class="credit-divider">-------------------------</p>
+    <p class="credit-item">
+      ⋄ Rudeejay & NOYSE - Party Pioneers<br>
+      <a href="https://youtu.be/LRs8Qu_X3EY" target="_blank">https://youtu.be/LRs8Qu_X3EY</a>
+    </p>
+    <p class="credit-divider">-------------------------</p>
 
-  <p class="credit-item">⋄ HURT RECORD 様<br>
-  <a href="https://www.hurtrecord.com/" target="_blank">https://www.hurtrecord.com/</a></p>
-  <p class="credit-divider">-------------------------</p>
+    <p class="credit-item">
+      ⋄ MVSTAFA x ANIZYZ - Different Eyes<br>
+      <a href="https://youtu.be/oHJxWgpMmSY" target="_blank">https://youtu.be/oHJxWgpMmSY</a>
+    </p>
+    <p class="credit-divider">-------------------------</p>
 
-  <p class="credit-item">⋄ トーマス大森音楽工房 様<br>
-  <a href="https://www.youtube.com/@FM_ThomasOomori" target="_blank">https://www.youtube.com/@FM_ThomasOomori</a></p>
-  <p class="credit-divider">-------------------------</p>
+    <p class="credit-item">
+      ⋄ Ahrix - Nova<br>
+      <a href="https://youtu.be/WfvzuniZTRA" target="_blank">https://youtu.be/WfvzuniZTRA</a>
+    </p>
+    <p class="credit-divider">-------------------------</p>
 
-  <p class="credit-item">⋄ DOVA-SYNDROME YouTube Official 様<br>
-  <a href="https://www.youtube.com/@DOVASYNDROMEYouTubeOfficial" target="_blank">https://www.youtube.com/@DOVASYNDROMEYouTubeOfficial</a></p>
-  <p class="credit-divider">-------------------------</p>
+    <p class="credit-item">
+      ⋄ Robin Hustin - Burn it Down<br>
+      <a href="https://youtu.be/xMCXZj5zwBE" target="_blank">https://youtu.be/xMCXZj5zwBE</a>
+    </p>
+    <p class="credit-divider">-------------------------</p>
 
-  <p class="credit-item">⋄ SHUNTA 様<br>
-  <a href="https://twitter.com/nin_pp" target="_blank">https://twitter.com/nin_pp</a><br>
-  <a href="https://www.youtube.com/@shunta_music" target="_blank">https://www.youtube.com/@shunta_music</a></p>
+    <p class="credit-item">
+      ⋄ Dirty Palm - No Stopping Love<br>
+      <a href="https://youtu.be/xFoGtSiqins" target="_blank">https://youtu.be/xFoGtSiqins</a>
+    </p>
 
-  <p class="updated">
-    最終更新：2026年 4月
-  </p>
+  </div>
+
+  <p class="updated">最終更新：2026年 4月</p>
 
 </div>
 
